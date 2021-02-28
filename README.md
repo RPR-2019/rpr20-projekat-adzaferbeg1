@@ -84,7 +84,7 @@ Lista biblioteka koje je potrebno uključiti prije pokretanja *Main* klase, prek
 ![Student View](https://raw.githubusercontent.com/RPR-2019/rpr20-projekat-adzaferbeg1/master/INTERFACE/student.PNG)
 ![Teacher View](https://raw.githubusercontent.com/RPR-2019/rpr20-projekat-adzaferbeg1/master/INTERFACE/teacher.PNG)
 
-_Za sve ostale informacije i način korištenja pročitati [Dokumentaciju](https://example.com)_
+_Za sve ostale informacije i način korištenja pročitati [Dokumentaciju](https://github.com/RPR-2019/rpr20-projekat-adzaferbeg1/blob/master/E_index_dokumentacija.pdf)_
 
 
 
