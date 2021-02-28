@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: ba.unsa.etf.rpr.Main
+Class-Path: C:\Users\Hp\IdeaProjects\RPR-e-indeks-adzaferbeg1-18593\src
+

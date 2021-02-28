@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="111.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="120.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="231.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text fx:id="txtWelcome" strokeType="OUTSIDE" strokeWidth="0.0" text="%welcomeP" GridPane.columnSpan="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="15.0" />
+         </GridPane.margin>
+      </Text>
+      <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+         <image>
+            <Image url="@../image/logo.png" />
+         </image>
+         <GridPane.margin>
+            <Insets bottom="10.0" top="15.0" />
+         </GridPane.margin>
+      </ImageView>
+      <TableView fx:id="tableViewSubject" editable="true" prefHeight="302.0" prefWidth="249.0" tableMenuButtonVisible="true" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="colTitle" prefWidth="75.0" text="Naziv" />
+          <TableColumn fx:id="colHomework" prefWidth="70.0" text="Zadaća" />
+            <TableColumn fx:id="colExam" text="Ispit" />
+            <TableColumn fx:id="colOther" prefWidth="75.0" text="Ostalo" />
+            <TableColumn fx:id="colPoints" prefWidth="75.0" text="Ukupno" />
+            <TableColumn fx:id="colGrade" prefWidth="75.0" text="Ocjena" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="-20.0" left="-50.0" right="20.0" />
+         </GridPane.margin>
+      </TableView>
+      <ChoiceBox fx:id="cbEmail" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="-50.0" right="70.0" top="20.0" />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ChoiceBox>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%pEmail" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="15.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <Button mnemonicParsing="false" onAction="#logout" prefWidth="100.0" style="-fx-background-color: #B0C4DE; -fx-border-color: #6495ED;" text="%logout" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="100.0" top="50.0" />
+         </GridPane.margin>
+      </Button>
+      <Text fx:id="txtGPA" fill="#0a4c7a" strokeType="OUTSIDE" strokeWidth="0.0" text="%gpa">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="15.0" top="50.0" />
+         </GridPane.margin>
+      </Text>
+      <Button mnemonicParsing="false" onAction="#sendEmail" prefWidth="100.0" style="-fx-border-color: #6495ED;" text="%sendEmail" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="150.0" left="-10.0" top="20.0" />
+         </GridPane.margin>
+      </Button>
+      <ListView fx:id="lvActivity" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="-65.0" left="-50.0" right="20.0" top="55.0" />
+         </GridPane.margin>
+      </ListView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6f7f8" height="110.0" stroke="BLACK" strokeType="INSIDE" width="300.0" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </Rectangle>
+      <Text fx:id="txtInfo" strokeType="OUTSIDE" strokeWidth="0.0" text="Podaci" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="15.0" />
+         </GridPane.margin>
+      </Text>
+      <Hyperlink fx:id="hyperArc" onAction="#subjectListPast" text="%arcSub" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="50.0" />
+         </GridPane.margin>
+      </Hyperlink>
+      <Hyperlink fx:id="hyperAc" onAction="#subjectListCurrent" prefHeight="23.0" prefWidth="108.0" text="%acSub" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="130.0" />
+         </GridPane.margin>
+      </Hyperlink>
+      <Hyperlink fx:id="hyperAll" onAction="#subjectListAll" text="%allSub" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="-7.0" />
+         </GridPane.margin>
+      </Hyperlink>
+      <CheckBox fx:id="checkbEx" mnemonicParsing="false" onAction="#exams" text="%exam" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets top="50.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="checkbAnn" mnemonicParsing="false" onAction="#announcements" text="%ann" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets top="50.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="checkbH" mnemonicParsing="false" onAction="#homeworks" text="%homew" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="130.0" top="50.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <MenuBar GridPane.columnSpan="4">
+        <menus>
+          <Menu mnemonicParsing="false" text="Printaj">
+            <items>
+              <MenuItem onAction="#print" text="Prepis ocjena">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+         <GridPane.margin>
+            <Insets bottom="90.0" />
+         </GridPane.margin>
+      </MenuBar>
+   </children>
+</GridPane>
